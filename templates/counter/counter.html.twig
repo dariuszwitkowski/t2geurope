@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Counter Page{% endblock %}
+
+{% block header %}Simple Counter{% endblock %}
+
+{% block body %}
+    <input id="time-picker" type="datetime-local">
+    <button id="change-date-btn">Change Lottery Date!</button>
+    <div class="counter d-flex m-5">
+        <div class="counter-field-ctn">
+            <div class="counter-field">
+                <p class="counter-val">0</p>
+                <img class="position-absolute center w-100" src="{{ asset('img/line.png') }}" />
+            </div>
+            <p class="label"></p>
+        </div>
+        <div class="counter-field-ctn">
+            <div class="counter-field">
+                <p class="counter-val">0</p>
+                <img class="position-absolute center w-100" src="{{ asset('img/line.png') }}" />
+            </div>
+            <p class="label"></p>
+        </div>
+        <div class="counter-field-ctn">
+            <div class="counter-field">
+                <p class="counter-val">0</p>
+                <img class="position-absolute center w-100" src="{{ asset('img/line.png') }}" />
+            </div>
+            <p class="label"></p>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascript %}
+  <script src="{{ asset('js/counter.js') }}"></script>
+{% endblock %}
