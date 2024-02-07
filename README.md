@@ -31,7 +31,7 @@ src/Command/DecryptMessageCommand.php
 ```
 w tym przypadku mamy 2 flagi
 ```bash
---encrypt //jeśli wiadomość ma zostać zdekodowana zamiast zakodowana (zadanie dodatkowe)
+--encrypt //jeśli wiadomość ma zostać zakodowana zamiast zdekodowana (zadanie dodatkowe)
 ```
 
 następnie podajemy wiadomość oraz klucz
