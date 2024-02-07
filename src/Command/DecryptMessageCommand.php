@@ -20,8 +20,6 @@ class DecryptMessageCommand extends Command
 {
     private const ENCRYPT_OPTION = 'encrypt';
 
-    private const CASE_SENSITIVE_OPTION = 'sensitive';
-
     private const ENCRYPTED_MESSAGE = 'Zaszyfrowana wiadomość to: %s';
 
     private const DECRYPTED_MESSAGE = 'Odszyfrowana wiadomość to: %s';
@@ -51,13 +49,6 @@ class DecryptMessageCommand extends Command
                 null, InputOption::VALUE_NONE,
                 'Pass this flag if you want to encrypt message instead of decrypting')
         ;
-        // W zadaniu dodatkowym wiadomosc zaczyna sie z wielkiej litery, natomiast w kluczu nie jest to uwzględnione
-        $this
-            ->addOption(
-                self::CASE_SENSITIVE_OPTION,
-                null, InputOption::VALUE_NONE,
-                'If flag is not passed to command, the message will be transformed to lowercase. Otherwise uppercase chars won\'t be encrypted')
-        ;
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
@@ -66,7 +57,7 @@ class DecryptMessageCommand extends Command
 
         // Używam ask() zamiast argumentów żeby uniknąć problemów związanych z escape'owaniem special char'ów na różnych systemach
         $message = $io->ask(self::ASK_FOR_MESSAGE_QUESTION, null, function (string $answer) use ($input) {
-            return $input->getOption(self::CASE_SENSITIVE_OPTION) ? $answer : strtolower($answer);
+            return $answer;
         });
         $key = $io->ask(self::ASK_FOR_KEY_QUESTION, null, function (string $answer) {
             return str_replace(' ', '', $answer);

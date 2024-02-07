@@ -12,6 +12,7 @@ composer
 
 ```bash
 git clone git@github.com:dariuszwitkowski/t2geurope.git
+cd t2geurope
 composer install
 npm i
 npm run dev
@@ -31,7 +32,6 @@ src/Command/DecryptMessageCommand.php
 w tym przypadku mamy 2 flagi
 ```bash
 --encrypt //jeśli wiadomość ma zostać zdekodowana zamiast zakodowana (zadanie dodatkowe)
---sensitive //jeśli chcemy aby wielkie litery nie byly traktowane jak male
 ```
 
 następnie podajemy wiadomość oraz klucz
