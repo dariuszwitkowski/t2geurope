@@ -29,7 +29,7 @@ kod znajduje się w
 ```bash
 src/Command/DecryptMessageCommand.php
 ```
-w tym przypadku mamy 2 flagi
+w tym przypadku mamy flagę
 ```bash
 --encrypt //jeśli wiadomość ma zostać zakodowana zamiast zdekodowana (zadanie dodatkowe)
 ```
