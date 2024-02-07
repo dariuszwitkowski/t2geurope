@@ -27,7 +27,8 @@ php bin/console app:decrypt-message
 ```
 kod znajduje się w 
 ```bash
-src/Command/DecryptMessageCommand.php
+./src/Command/DecryptMessageCommand.php
+./src/Service/CryptographyService.php
 ```
 w tym przypadku mamy flagę
 ```bash
@@ -44,12 +45,12 @@ php bin/console app:display-number-like-lcd {number}
 
 kod znajduje się w
 ```bash
-src/Command/DisplayNumberLikeLcdCommand.php
+./src/Command/DisplayNumberLikeLcdCommand.php
 ```
 
 ## Dodatkowe informacje
 
-Zapytania do zadań z SQL znajdują się w
+Zapytania do zadań z SQL znajdują się w:
 ```bash
 ./sql/wonTickets.sql // Zadanie "Wygrane losy"
 ./sql/statistics(dummy).sql // Zadanie "Statystyka zarobków" - rozwiązanie raczej średnie z użyciem subquery
@@ -57,3 +58,14 @@ Zapytania do zadań z SQL znajdują się w
 ```
 
 Zadanie Frontendowe będzie można zobaczyć na glownym roucie aplikacji. 
+
+kod HTML znajduje się w:
+```bash
+./templates/counter/counter.html.twig
+```
+JS w:
+```bash
+./public/js/counter.js
+```
+
+
