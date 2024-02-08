@@ -66,6 +66,7 @@ class DecryptMessageCommand extends Command
         $err = $this->validateKey($key);
         if ($err) {
             $io->error($err);
+            
             return Command::FAILURE;
         }
 
