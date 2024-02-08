@@ -77,7 +77,7 @@ class DecryptMessageCommand extends Command
         return Command::SUCCESS;
     }
 
-    private function validateKey($key): ?string
+    private function validateKey(string $key): ?string
     {
         if ($this->cryptographyService->validateKeyInvalidChars($key)) {
             return sprintf(self::INVALID_CHARS_IN_KEY_MESSAGE, CryptographyService::INVALID_KEY_CHARS);
